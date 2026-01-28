@@ -34,7 +34,7 @@ def prefers_new(student_prefs, new_hospital, current_hospital):
 
 
 def output(pairings):
-    with open('pairings.out', 'w') as file:
+    with open('out/pairings.out', 'w') as file:
         for i in pairings.keys():
             file.write('{} {}\n'.format(pairings[i], i))
     file.close()
