@@ -2,6 +2,26 @@
 Algorithm and Abstraction Programming Assignment 1. 
 
 
+Contributors:
+
+Nicholas Farr, UFID: 17993779
+Trevor Gross, UFID: 
+
+
+Compile:
+    1. Install Dependencies
+
+
+
+
+Data Format Assumptions:
+
+Input Data:
+
+
+
+
+
 Your README must point to these files, explain how to reproduce the output and have the following:
 Both students' names and UFIDs.
 Instructions to compile/build your code (if applicable).

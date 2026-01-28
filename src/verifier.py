@@ -17,11 +17,16 @@ def blockingPairs(hospitals, students, pairings):
     h_s = {h: s for s, h in pairings.items()}
 
     for hospital in hospitals:
-        
-            a = hospitals[hospital][iterator[hospital]]
-            iterator[hospital] +=1
-            if prefers_new(students[a], hospital, pairings[a]):
-                return "Blocking Pair: Hospital {} and Student {} prefer each other over their current assignments.".format(hospital, a)
+            a = h_s[hospital]
+            h_prefs = hospitals[hospital]
+            student_rank = h_prefs.index(a)
+            preferred = h_prefs[:student_rank]
+
+            for pref in preferred:
+                s_pref = pairings[pref]
+
+                if prefers_new(students[pref], hospital, s_pref):
+                    return "Blocking Pair: Hospital {} and Student {} prefer each other over their current assignments.".format(hospital, pref)
             
     return '-1'
     
